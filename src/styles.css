@@ -1,13 +1,15 @@
 :root {
   --fontColor: #985b2d;
   --optionFont: Courier New, monospace;
+  --menuItemColor: #2e2e2e;
+  --descFont: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  --descColor: #977d62;
 }
-
-
 
 body {
   font-family: sans-serif;
-  background-color: #ECDFCD;
+  background-color: #ecdfcd;
 }
 
 body header h1 {
@@ -15,32 +17,21 @@ body header h1 {
   color: var(--fontColor);
   text-align: center;
   text-transform: uppercase;
-  
 }
 
 main {
-  display: flex
+  display: flex;
+  margin: auto;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--fontColor);
+  width: 600px;
 }
-
-/* #starters-list > h2{
-   list-style-type: upper-roman;
-} */
 
 main ul {
   list-style-type: upper-roman;
 }
-
-.starters-list > h2 {
-  font-family: palatino;
-  font-size: 20px;
-}
-.pasta-list > h2 {
-  font-family: palatino;
-}
-
-.pizza-list > h2 {
-  font-family: palatino;
-}
+/*Starter List*/
 #starters > h2 {
   font-family: var(--optionFont);
   color: var(--fontColor);
@@ -48,16 +39,45 @@ main ul {
   text-decoration: underline;
   text-decoration-color: var(--fontColor);
 }
-#pasta > h2 {  
+.starters-list > h2 {
+  font-family: palatino;
+  font-size: 20px;
+  color: var(--menuItemColor);
+}
+.starters-list > h3 {
+  margin-top: -10px;
+  font-size: 15px;
+  font-family: palatino;
+}
+.starters-list > p {
+  color: var(--descColor);
+  font-family: var(--descFont);
+  font-size: 12px;
+}
+/*Pasta List*/
+#pasta > h2 {
   font-family: var(--optionFont);
   color: #985b2d;
   text-align: center;
   text-decoration: underline;
   text-decoration-color: var(--fontColor);
 }
-
-
-
+.pasta-list > p {
+  color: var(--descColor);
+  font-family: var(--descFont);
+  font-size: 12px;
+}
+.pasta-list > h2 {
+  font-family: palatino;
+  font-size: 20px;
+  color: var(--menuItemColor);
+}
+.pasta-list > h3 {
+  margin-top: -10px;
+  font-size: 15px;
+  font-family: palatino;
+}
+/*Pizza List*/
 #pizza > h2 {
   font-family: var(--optionFont);
   color: #985b2d;
@@ -65,7 +85,29 @@ main ul {
   text-decoration: underline;
   text-decoration-color: var(--fontColor);
 }
+.pizza-list > p {
+  color: var(--descColor);
+  font-family: var(--descFont);
+  font-size: 12px;
+}
+
+.pizza-list > h2 {
+  font-family: palatino;
+  font-size: 20px;
+  color: var(--menuItemColor);
+}
+.pizza-list > h3 {
+  margin-top: -10px;
+  font-family: palatino;
+  font-size: 15px;
+}
+
+.spicy {
+  display: inline;
+  font-family: var(--optionFont);
+}
 .spicy:before {
+  display: inline-block;
   width: 16px;
   height: 16px;
   content: "";

@@ -30,7 +30,7 @@ function menuRender(section, items) {
     return listElement.innerHTML = `
       <div class ="${section}-list">
         <h2>${item.name} ${spicyRender(item.spicy)}</h2>
-        <h3>${item.price.toFixed(2)}</h3>
+        <h3>$${item.price.toFixed(2)}</h3>
         <p>${item.description}</p>
       </div>
     `;
@@ -41,8 +41,6 @@ let spicyOption = document.createElement("input")
 spicyOption.type = "checkbox"
 spicyOption.id = "spicy" 
 spicyOption.value = "Spicy"
-
-let main = document.getElementsByTagName("main")
 
 
 const starterItems = menuFilter(menuItems, "starters");
