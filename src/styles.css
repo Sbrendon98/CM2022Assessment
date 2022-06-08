@@ -1,7 +1,70 @@
-body {
-  font-family: sans-serif;
+:root {
+  --fontColor: #985b2d;
+  --optionFont: Courier New, monospace;
 }
 
+
+
+body {
+  font-family: sans-serif;
+  background-color: #ECDFCD;
+}
+
+body header h1 {
+  font-family: Andale Mono, monospace;
+  color: var(--fontColor);
+  text-align: center;
+  text-transform: uppercase;
+  
+}
+
+main {
+  display: flex
+}
+
+/* #starters-list > h2{
+   list-style-type: upper-roman;
+} */
+
+main ul {
+  list-style-type: upper-roman;
+}
+
+.starters-list > h2 {
+  font-family: palatino;
+  font-size: 20px;
+}
+.pasta-list > h2 {
+  font-family: palatino;
+}
+
+.pizza-list > h2 {
+  font-family: palatino;
+}
+#starters > h2 {
+  font-family: var(--optionFont);
+  color: var(--fontColor);
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: var(--fontColor);
+}
+#pasta > h2 {  
+  font-family: var(--optionFont);
+  color: #985b2d;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: var(--fontColor);
+}
+
+
+
+#pizza > h2 {
+  font-family: var(--optionFont);
+  color: #985b2d;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: var(--fontColor);
+}
 .spicy:before {
   width: 16px;
   height: 16px;

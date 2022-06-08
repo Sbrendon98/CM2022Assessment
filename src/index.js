@@ -11,11 +11,12 @@ function menuFilter(menu, type) {
     );
 }
 
-// const itemRender = (item) => {
-//   const listElement = document.createElement("li")
-//   listElement.innerHTML = item
-//   return listElement
-// }
+const spicyRender = (item) => {
+  if(item === true) {
+      return `<p class="spicy"></p>`
+  }
+  return ""
+}
 
 function menuRender(section, items) {
   let sectionTag = document.getElementById(`${section}`);
@@ -27,14 +28,22 @@ function menuRender(section, items) {
     let listElement = document.createElement("li");
     list.appendChild(listElement);
     return listElement.innerHTML = `
-      <div id ="${section}-list">
-        <h2>${item.name}</h2>
+      <div class ="${section}-list">
+        <h2>${item.name} ${spicyRender(item.spicy)}</h2>
         <h3>${item.price.toFixed(2)}</h3>
         <p>${item.description}</p>
       </div>
     `;
   });
 }
+
+let spicyOption = document.createElement("input")
+spicyOption.type = "checkbox"
+spicyOption.id = "spicy" 
+spicyOption.value = "Spicy"
+
+let main = document.getElementsByTagName("main")
+
 
 const starterItems = menuFilter(menuItems, "starters");
 const pastaItems = menuFilter(menuItems, "pasta");
@@ -44,6 +53,4 @@ menuRender("starters", starterItems);
 menuRender("pasta", pastaItems)
 menuRender("pizza", pizzaItems)
 
-console.log(starterItems);
-console.log(pastaItems);
-console.log(pizzaItems);
+
